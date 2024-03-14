@@ -1,7 +1,7 @@
 ---
-	import Navigation from "./components/Navigation.astro";
-	import Nyhedsbrev1 from "./components/Nyhedsbrev1.astro";
-	import Footer from "./components/Footer.astro";
+	import Navigation from "../components/Navigation.astro";
+	import Nyhedsbrev1 from "../components/Nyhedsbrev1.astro";
+	import Footer from "../components/Footer.astro";
 	import "./styles/style.css";
 ---
 
@@ -11,25 +11,14 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
+		<link rel="stylesheet" href="style.css">
 		<title>Astro</title>
 	</head>
 	<body>
-		<header>
-            <nav>HER ER NAV</nav>
+<main>
 	<Navigation />
-        </header>
-
-
-
-        <slot />
-
-
-        <div>NYHEDESBREV</div>
-
-		<Nyhedsbrev1 />
-
-        <footer>
+	<slot />
 	<Footer />
-        </footer>
+</main>
 	</body>
 </html>
