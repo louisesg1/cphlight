@@ -8,11 +8,12 @@ import Button from "../components/Button.astro";
 ---
 
 	<Layout>
+	<div class="start"> 
 		<h1>PROGRAM</h1>
 		<h3>02-25 FEBRUAR 2024</h3>
+	</div>
 		<div class="viden">	<p class="beskrivelse">Her kan du finde information om lysværkerne samt vores tilgængelige aktiviteter under festivalen.</p></div>
-<p>Hvilke områder af byen ønsker du at se?</p>
-
+<p class="område">Hvilke områder af byen ønsker du at se?</p>
 
 
 <div class="by_liste">
@@ -36,6 +37,7 @@ import Button from "../components/Button.astro";
 	<Button variant="primary">Events</Button>
 </div>
 
+
 		<Program_vark />
 		<Program_vark />
 		<Program_vark />
@@ -46,6 +48,12 @@ import Button from "../components/Button.astro";
 .viden, .by_liste, .valg {
 	border-bottom: 0.5px solid white;
 	width: 80%;
+	margin: 50px auto;
+}
+
+.område, .start {
+	width: 80%;
+	margin: 50px auto;
 }
 
 
@@ -58,6 +66,10 @@ import Button from "../components/Button.astro";
 	display: grid;
 	grid-template-columns: repeat(10, 1fr);
 	width: 80%;
+}
+
+.start {
+
 }
 
 	</style>
