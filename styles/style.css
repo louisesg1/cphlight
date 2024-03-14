@@ -1,5 +1,8 @@
 body {
-  background-color: #08080b;
+  background-image: url("public/testbkg.webp");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 
 h1,
@@ -8,4 +11,16 @@ p,
 a,
 h3 {
   color: white;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: lighter;
+}
+
+p {
+  font-family: "Inter", sans-serif;
+  font-weight: lighter;
 }
