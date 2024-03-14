@@ -13,7 +13,10 @@ import Button from "../components/Button.astro";
 		<div class="viden">	<p class="beskrivelse">Her kan du finde information om lysværkerne samt vores tilgængelige aktiviteter under festivalen.</p></div>
 <p>Hvilke områder af byen ønsker du at se?</p>
 
+
+
 <div class="by_liste">
+
 <Button variant="primary">København K</Button>
 	<Button variant="secondary">Vesterbro</Button>
 		<Button variant="primary">Nørrebro</Button>
@@ -24,8 +27,13 @@ import Button from "../components/Button.astro";
 		<Button variant="secondary">Amagerbro</Button>
 		<Button variant="secondary">Christianshavn</Button>
 		<Button variant="secondary">Valby</Button>
+</div>
 
 
+<div class="valg">
+	<p>Hvad ønsker du at se?</p>
+	<Button variant="secondary">Lysværker</Button>
+	<Button variant="primary">Events</Button>
 </div>
 
 		<Program_vark />
@@ -35,10 +43,12 @@ import Button from "../components/Button.astro";
 	</Layout>
 
 	<style>
-.viden {
+.viden, .by_liste, .valg {
 	border-bottom: 0.5px solid white;
 	width: 80%;
 }
+
+
 
 .beskrivelse {
 	margin-bottom: 60px;

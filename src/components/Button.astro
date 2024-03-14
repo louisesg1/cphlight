@@ -1,9 +1,13 @@
 ---
 const {variant} = Astro.props;
 ---
+
+
 <button class={variant}>  
     <slot />
 </button>
+
+
 
 
 
@@ -25,6 +29,7 @@ button {
 .secondary {
     background-color: #00F0FF;
 }
+
 
 
 </style>
