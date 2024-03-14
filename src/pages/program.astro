@@ -2,7 +2,7 @@
 import "./styles/style.css";
 import Program_vark from "../components/Program_vark.astro";
 import Layout from "../layouts/Layout.astro";
-import Byer from "../components/Byer.astro";
+import Button from "../components/Button.astro";
 
 
 ---
@@ -14,13 +14,18 @@ import Byer from "../components/Byer.astro";
 <p>Hvilke områder af byen ønsker du at se?</p>
 
 <div class="by_liste">
-<Byer />
-<Byer />
-<Byer />
-<Byer />
-<Byer />
-<Byer />
-<Byer />
+<Button variant="primary">København K</Button>
+	<Button variant="secondary">Vesterbro</Button>
+		<Button variant="primary">Nørrebro</Button>
+		<Button variant="primary">Amager</Button>
+		<Button variant="primary">Østerbro</Button>
+		<Button variant="secondary">Nordhavn</Button>
+		<Button variant="primary">Nordvest</Button>
+		<Button variant="secondary">Amagerbro</Button>
+		<Button variant="secondary">Christianshavn</Button>
+		<Button variant="secondary">Valby</Button>
+
+
 </div>
 
 		<Program_vark />
@@ -41,7 +46,7 @@ import Byer from "../components/Byer.astro";
 
 .by_liste {
 	display: grid;
-	grid-template-columns: repeat(7, 1fr);
+	grid-template-columns: repeat(10, 1fr);
 	width: 80%;
 }
 
