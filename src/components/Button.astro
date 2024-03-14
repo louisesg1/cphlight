@@ -7,12 +7,6 @@ const {variant} = Astro.props;
     <slot />
 </button>
 
-
-
-
-
-
-
 <style>
 button {
   width: 100px;
@@ -29,7 +23,23 @@ button {
 .secondary {
     background-color: #00F0FF;
 }
-
-
-
 </style>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const buttons = document.querySelectorAll('.primary');
+    
+        buttons.forEach(function(button) {
+            button.addEventListener('click', function() {
+                if (button.classList.contains('primary')) {
+                    button.classList.remove('primary');
+                    button.classList.add('secondary');
+                } else if (button.classList.contains('secondary')) {
+                    button.classList.remove('secondary');
+                    button.classList.add('primary');
+                }
+            });
+        });
+    });
+</script>
