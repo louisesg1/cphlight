@@ -2,6 +2,7 @@
 
 ---
 
+<a class="logo" href="/"><img src="public/logo.png" alt="logo"></a>
 <nav class="navbar">
     <div class="sprog"> 
         <h3 class="da">
@@ -42,9 +43,16 @@
     color: #0FF0FF; /* Ændr farven til lys grå ved hover */
 }
 
+.logo img{
+        max-width: 7vw;
+        margin-left: 20px; /* Justér margen til venstre */
+        margin-top: 10px;
+        z-index: 1000;
+    }
 .glas {
     max-width: auto;
     height: 2.3vw;
+    z-index: 100;
 }
 
 .sprog {
@@ -52,6 +60,7 @@
     flex-direction: row;
     gap: 10px;
     margin-top: -10px;
+    z-index: 100;
 }
 
 .bold {
@@ -63,6 +72,8 @@
     justify-content: right;
     flex-direction: row;
     gap: 30px;
+    margin-top: -62px;
+
 }
 
 .burger-menu {
