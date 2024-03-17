@@ -8,12 +8,62 @@ import Bannermap from "../components/Bannermap.astro";
 
 <Layout>
 
-<h1>FORSIDE</h1>
+<h1>02-25 FEBRUAR 2024</h1>
+<div class="forklarende_tekst"> 
+    <p>Copenhagen Light Festival er Nordens største lysfestival, der finder sted i hjertet af København. Den nordiske vinter er lang og mørk, derfor startede Copenhagen Light Festival, der hver februar lyser byen op.</p>
+<p>Festivalen er non-profit og har et bredt udvalg af forskellige lyskunstværker, kurateret af vores dygtige kuratorer. Festivalen egner sig både til en kort gåtur, en længere cykeltur, en med bus eller båd.</p>
+</div>
+
 
 <Banner />
+
+<div class="container">
+    <img src="public/billede_forside.png" alt="Billede">
+    <h2 class="text">GUIDEDE TURE</h2>
+  </div>
 
 <slot />
 
 <Bannermap />
+
+<div class="container">
+<h1>TAK TIL</h1>
+<img src="public/partner.png" alt="partnere" class="partnere">
+</div>
 </Layout>
 
+<style>
+    h1{
+    text-align: center;
+    }
+
+    .forklarende_tekst {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        margin: 80px;
+    }
+ .container {
+  display: flex;
+  justify-content: center; /* Centrer vandret */
+  align-items: center; /* Centrer lodret */
+  flex-direction: column; /* Stak elementerne lodret */
+  height: 600px; /* Juster højde efter behov */
+  margin-top: 100px;
+}
+
+.text {
+  margin-top: 20px; /* Tilføj lidt afstand mellem billedet og teksten */
+  margin-right: 20px; /* Tilføj margin til højre */
+  margin-bottom: 90px;
+}
+
+img {
+  max-width: 100%; /* Sørg for, at billedet ikke overstiger containerens bredde */
+  max-height: 100%; /* Sørg for, at billedet ikke overstiger containerens højde */
+}
+
+.container .text {
+  justify-content: center; /* Centrer teksten vandret */
+}
+    </style>
