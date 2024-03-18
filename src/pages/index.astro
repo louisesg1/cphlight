@@ -2,12 +2,18 @@
 import Layout from "../layouts/Layout.astro";
 import Banner from "../components/Banner.astro";
 import Bannermap from "../components/Bannermap.astro";
-
+import Readmore from "../components/Readmore.astro";
 
 ---
 
 <Layout>
 
+  <div class="vid">
+    <video width="1426" height="600" controls autoplay>
+        <source src="public/video.mov" type="video/mp4">
+    </video>
+
+</div>
 <h1>02-25 FEBRUAR 2024</h1>
 <div class="forklarende_tekst"> 
     <p>Copenhagen Light Festival er Nordens største lysfestival, der finder sted i hjertet af København. Den nordiske vinter er lang og mørk, derfor startede Copenhagen Light Festival, der hver februar lyser byen op.</p>
@@ -22,6 +28,8 @@ import Bannermap from "../components/Bannermap.astro";
     <h2 class="text">GUIDEDE TURE</h2>
   </div>
 
+  <Readmore />
+
 <slot />
 
 <Bannermap />
@@ -33,6 +41,8 @@ import Bannermap from "../components/Bannermap.astro";
 </Layout>
 
 <style>
+
+  @media (min-width: 800px)
     h1{
     text-align: center;
     }
@@ -41,7 +51,7 @@ import Bannermap from "../components/Bannermap.astro";
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 40px;
-        margin: 80px;
+        padding: 100px;
     }
  .container {
   display: flex;
@@ -65,5 +75,10 @@ img {
 
 .container .text {
   justify-content: center; /* Centrer teksten vandret */
+}
+
+.vid {
+  width: 100%;
+  margin-top: -88px;
 }
     </style>
