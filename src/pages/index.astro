@@ -21,7 +21,13 @@ import Readmore from "../components/Readmore.astro";
 </div>
 
 
-<Banner />
+<Banner>
+  <div class="text-rotate">Se lysværker og events for 2024</div>
+    <div class="text-rotate">Se lysværker og events for 2024</div>
+    <div class="text-rotate">Se lysværker og events for 2024</div>
+    <div class="text-rotate">Se lysværker og events for 2024</div>
+    <div class="text-rotate">Se lysværker og events for 2024</div>
+</Banner>
 
 <div class="container">
     <img src="public/billede_forside.png" alt="Billede">
@@ -32,7 +38,13 @@ import Readmore from "../components/Readmore.astro";
 
 <slot />
 
-<Bannermap />
+<Banner>
+  <div class="text-rotate">Se map og ruter under festivalen</div>
+  <div class="text-rotate">Se map og ruter under festivalen</div>
+  <div class="text-rotate">Se map og ruter under festivalen</div>
+  <div class="text-rotate">Se map og ruter under festivalen</div>
+  <div class="text-rotate">Se map og ruter under festivalen</div>
+</Banner>
 
 <div class="container">
 <h1>TAK TIL</h1>
@@ -42,7 +54,7 @@ import Readmore from "../components/Readmore.astro";
 
 <style>
 
-  @media (min-width: 800px)
+  @media (min-width: 800px) {
     h1{
     text-align: center;
     }
@@ -80,5 +92,6 @@ img {
 .vid {
   width: 100%;
   margin-top: -88px;
+}
 }
     </style>

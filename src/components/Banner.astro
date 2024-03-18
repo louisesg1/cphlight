@@ -1,12 +1,9 @@
 ---
 	import "./styles/style.css";
+
 ---
 <div class="container"><a href="program">
-    <div class="text-rotate">Se lysværker og events for 2024</div>
-    <div class="text-rotate">Se lysværker og events for 2024</div>
-    <div class="text-rotate">Se lysværker og events for 2024</div>
-    <div class="text-rotate">Se lysværker og events for 2024</div>
-    <div class="text-rotate">Se lysværker og events for 2024</div>
+    <slot />
 </a>
 </div>
 
@@ -19,46 +16,6 @@
     height: 30px; /* Adjust height as needed */
     background-color: black;
     margin-bottom: 20px;
-}
-
-.text-rotate {
-    white-space: nowrap;
-    position: absolute;
-    font-size: 24px; /* Adjust font size as needed */
-    opacity: 0; /* Initially hidden */
-    animation: marquee 35s linear infinite;
-    right: 0; /* Start position on the right side */
-    font-family: "Montserrat", sans-serif;
-    font-weight: lighter;
-    color: white;
-    text-transform: uppercase;
-}
-
-@keyframes marquee {
-    0% {
-        transform: translateX(100%); /* Start from the right edge */
-        /* opacity: 1; Remove opacity property */
-        opacity: 1;
-    }
-    100% {
-        transform: translateX(-500%); /* Move completely to the left (twice the container width) */
-        opacity: 1;
-    }
-}
-
-.text-rotate:nth-child(2) {
-    animation-delay: 7s; /* Delay the animation of the second text by half the duration */
-}
-
-.text-rotate:nth-child(3) {
-    animation-delay: 14s; /* Delay the animation of the second text by half the duration */
-}
-.text-rotate:nth-child(4) {
-    animation-delay: 21s; /* Delay the animation of the second text by half the duration */
-}
-
-.text-rotate:nth-child(5) {
-    animation-delay: 28s; /* Delay the animation of the second text by half the duration */
 }
   </style>
 
