@@ -1,8 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Banner from "../components/Banner.astro";
-import Bannermap from "../components/Bannermap.astro";
 import Readmore from "../components/Readmore.astro";
+import Sponsor from "../components/Sponsor.astro";
 
 ---
 
@@ -34,6 +34,7 @@ import Readmore from "../components/Readmore.astro";
     <h2 class="text">GUIDEDE TURE</h2>
   </div>
 
+
   <Readmore />
 
 <slot />
@@ -46,9 +47,9 @@ import Readmore from "../components/Readmore.astro";
   <div class="text-rotate">Se map og ruter under festivalen</div>
 </Banner>
 
-<div class="container">
+<div class="container1">
 <h1>TAK TIL</h1>
-<img src="public/partner.png" alt="partnere" class="partnere">
+<Sponsor />
 </div>
 </Layout>
 
@@ -74,10 +75,18 @@ import Readmore from "../components/Readmore.astro";
   margin-top: 100px;
 }
 
+.container1 {
+  display: flex;
+  justify-content: center; /* Centrer vandret */
+  align-items: center; /* Centrer lodret */
+  flex-direction: column; /* Stak elementerne lodret */
+  margin-bottom: 150px;
+}
+
 .text {
-  margin-top: 20px; /* Tilføj lidt afstand mellem billedet og teksten */
-  margin-right: 20px; /* Tilføj margin til højre */
-  margin-bottom: 90px;
+  margin-top: 20px;
+margin-right: 660px;
+margin-bottom: 20px;
 }
 
 img {
@@ -85,9 +94,7 @@ img {
   max-height: 100%; /* Sørg for, at billedet ikke overstiger containerens højde */
 }
 
-.container .text {
-  justify-content: center; /* Centrer teksten vandret */
-}
+
 
 .vid {
   width: 100%;

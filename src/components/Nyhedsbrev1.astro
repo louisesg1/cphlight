@@ -1,21 +1,27 @@
 ---
 
 ---
+<div class="nyhedsbrev_text">
+    <div class="videmere">
+      <h2>Vil du vide mere om Copenhagen Light Festival?</h2>
+      <p>For at være sikker på at du er helt up to date med Copenhagen Light Festival er det en god ide at være med på vores nyhedsbrev.</p>
+    </div>
 
-<article class="nyhedsbrev_text">
-    <div class="nyhedsbrev_viden">
-<h2>Vil du vide mere om Copenhagen Light Festival?</h2>
-<p>For at være sikker på at du er helt up to date med Copenhagen Light Festival er det en god ide at være med på vores nyhedsbrev.</p>
-</div> 
-<div class="nyhedsbrev_tilmeld">
-<h2>TILMELD DIG HER</h2>
-<div class="information">
-<p class="fornavn">FORNAVN</p>
-<p class="efternavn">EFTERNAVN</p>
-<p class="tilhor">HVAD ER DIT TILHØRSFORHOLD?</p>
-</div>
-</div>
-</article>
+      <form class="nyhedsbrev_viden" action="/submit" method="post" enctype="multipart/form-data">
+      <div class="nyhedsbrev_tilmeld">
+        <h2>TILMELD DIG HER</h2>
+        <div class="information">
+      <label for="fornavn"><input placeholder="e.g. Jens" type="text" id="fornavn" name="fornavn" required /></label>
+
+
+      <label for="email"><input placeholder="Email" type="text" id="email" name="email" required /></label>
+    
+
+      <label for="beskrivelse"><input placeholder="Hvad er dit tilhørsforhold?" type="text" id="beskrivelse" name="beskrivelse" required /></label>
+    </div>
+    </form>
+    <input type="submit" id="submit" value="submit" />
+  </div>
 
 
 <style>
@@ -28,30 +34,46 @@
         background-color: rgba(0, 0, 0, 0.6);
     }
 
-
-    .nyhedsbrev_viden h2, .nyhedsbrev_viden p, .nyhedsbrev_tilmeld h2, .fornavn, .efternavn, .tilhor {
-        padding: 10px;
-    }
  .nyhedsbrev_text {
     width: 750px; 
     height: 300px; 
     border: 2px solid white; 
-padding: 10px;
+    padding: 10px;
  }
 
  .nyhedsbrev_viden {
-    border-right: 2px solid white;
+    border-left: 2px solid white;
  }
 
 .nyhedsbrev_tilmeld {
     padding: 10px;
+    grid: 2/2;
 }
-    .information {
-        width: 400px;
-        border: 2px solid white;
+
+
+    input#fornavn, input#email, input#beskrivelse {
+        background-color: black;
+        border: 0.5px solid white;
+        color: white;
+        width: 395px;
+        height: 50px;
+        font-family: "Montserrat", sans-serif;
+        text-transform: uppercase;
     }
 
-    .fornavn, .efternavn {
-        border-bottom: 2px solid white;
+    #submit {
+        margin-top: 5px;
+        background-color: black;
+        border: 0.5px solid white;
+        color: white;
+        font-family: "Montserrat", sans-serif;
+        text-transform: uppercase;
+        width: 100px;
+        height: 25px;
+
     }
+    .videmere {
+padding: 10px;
+    }
+
 </style>

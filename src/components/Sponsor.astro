@@ -1,0 +1,94 @@
+---
+
+---
+<div class="billeder">
+    <img class="image1" src="public/augustinus.png" alt="">
+    <img class="image2" src="public/knud.png" alt="">
+    <img class="image3" src="public/villum.png" alt="">
+    <img class="image4" src="public/william.png" alt="">
+    <img class="image5" src="public/aage.png" alt="">
+  </div>
+
+<style>
+
+    img {
+        width: 900px;
+    }
+
+    .billeder {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.billeder {
+    display: flex;
+  justify-content: center; /* Centrer vandret */
+  align-items: center; /* Centrer lodret */
+  flex-direction: column; /* Stak elementerne lodret */
+margin-top: 140px;
+}
+
+.billeder img {
+  position: absolute;
+  opacity: 0;
+}
+
+.fade-in {
+  animation: fadeInAnimation 2s ease forwards;
+}
+
+.fade-out {
+  animation: fadeOutAnimation 2s ease forwards;
+}
+
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOutAnimation {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+</style>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  var images = document.querySelectorAll('.billeder img');
+  var index = 0;
+  
+  function showNextImage() {
+    // Hide all images
+    images.forEach(function(img) {
+      img.classList.remove('fade-in');
+      img.classList.add('fade-out');
+    });
+    
+    // Show the current image
+    images[index].classList.remove('fade-out');
+    images[index].classList.add('fade-in');
+    
+    // Move to the next image
+    index++;
+    if (index >= images.length) {
+      index = 0; // Start over if reached the end
+    }
+  }
+  
+  // Show the first image initially
+  showNextImage();
+  
+  // Schedule showing the next image after a delay
+  setInterval(showNextImage, 2000); // Adjust delay as needed
+});
+</script>
