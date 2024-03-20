@@ -2,11 +2,12 @@
 const {data} = Astro.props;
 console.log(data);
 ---
-
+<a href={`shows/${data.slug}`}>
 <article class="vark">
     <h2>{data.title}</h2>
     <p>{data.area}</p>
 </article>
+</a>
 
 <style>
 .vark {
@@ -14,6 +15,10 @@ console.log(data);
     border: none;
     border-bottom: 0.5px solid white;
     margin: 50px auto; /* Centrer artiklen vandret */
+}
+
+a {
+    text-decoration: none;
 }
 
 .vark:hover, .vark:hover h2, .vark:hover p {
