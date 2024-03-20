@@ -2,116 +2,111 @@
 
 ---
 
-<a class="logo" href="/"><img src="public/logo.png" alt="logo"></a>
+<a class="logo" href="/"><img src="/logo.png" alt="logo" /></a>
 <nav class="navbar">
-    <div class="sprog"> 
-        <h3 class="da">
-            DA
-        </h3>
-    
-        <h3>/</h3>
-    
-        <h3 class="en">
-            EN
-        </h3>
-    </div>
-    <img src="public/glas.png" alt="forstørrelsesglas" class="glas">
-    <div class="burger-menu">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-    </div>
+  <div class="sprog">
+    <h3 class="da">DA</h3>
 
-    <ul class="menu-list">
-        <li><a href="/">Hjem</a></li>
-        <li><a href="program">Program</a></li>
-        <li><a href="/">Map</a></li>
-        <li><a href="omos">Om os</a></li>
-        <li><a href="/">Kontakt</a></li>
-        <li><a href="/">APP</a></li>
-        <li><a href="/">FAQ</a></li>
-    </ul>
+    <h3>/</h3>
+
+    <h3 class="en">EN</h3>
+  </div>
+  <img src="/glas.png" alt="forstørrelsesglas" class="glas" />
+  <div class="burger-menu">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+
+  <ul class="menu-list">
+    <li><a href="/">Hjem</a></li>
+    <li><a href="program">Program</a></li>
+    <li><a href="/">Map</a></li>
+    <li><a href="omos">Om os</a></li>
+    <li><a href="/">Kontakt</a></li>
+    <li><a href="/">APP</a></li>
+    <li><a href="/">FAQ</a></li>
+  </ul>
 </nav>
 
 <style>
-    a{
-        font-size: 3rem;
-        text-transform: uppercase;
-    }
+  a {
+    font-size: 3rem;
+    text-transform: uppercase;
+  }
 
-    .menu-list li a:hover {
-    color: #0FF0FF; /* Ændr farven til lys grå ved hover */
-}
+  .menu-list li a:hover {
+    color: #0ff0ff; /* Ændr farven til lys grå ved hover */
+  }
 
-.logo img{
-        max-width: 7vw;
-        margin-left: 20px; /* Justér margen til venstre */
-        margin-top: 10px;
-        z-index: 1100;
-    }
-.glas {
+  .logo img {
+    max-width: 7vw;
+    margin-left: 20px; /* Justér margen til venstre */
+    margin-top: 10px;
+    z-index: 1100;
+  }
+  .glas {
     max-width: auto;
     height: 2.3vw;
     z-index: 100;
-}
+  }
 
-.sprog {
+  .sprog {
     display: flex;
     flex-direction: row;
     gap: 10px;
     margin-top: -10px;
     z-index: 100;
-}
+  }
 
-.bold {
+  .bold {
     font-weight: bold; /* Gør teksten fed */
-}
+  }
 
-.navbar {
+  .navbar {
     display: flex;
     justify-content: right;
     flex-direction: row;
     gap: 30px;
     margin-top: -62px;
+  }
 
-}
-
-.burger-menu {
+  .burger-menu {
     display: flex;
     flex-direction: column;
     cursor: pointer;
-}
+  }
 
-.bar {
+  .bar {
     width: 30px;
     height: 2px;
     background-color: white;
     margin: 5px;
     transition: transform 0.3s ease; /* Transition for smooth rotation */
     z-index: 100;
-}
+  }
 
-/* Vis midterlinjen i krydset */
-.cross .bar:nth-child(1) {
+  /* Vis midterlinjen i krydset */
+  .cross .bar:nth-child(1) {
     transform: rotate(50deg) translate(5px, 5px);
-}
+  }
 
-.cross .bar:nth-child(2) {
-  display: none;  /* Behold midterlinjen synlig */
-}
+  .cross .bar:nth-child(2) {
+    display: none; /* Behold midterlinjen synlig */
+  }
 
-.cross .bar:nth-child(3) {
+  .cross .bar:nth-child(3) {
     transform: rotate(-50deg) translate(5px, -5px);
-}
+  }
 
-.menu-list {
+  .menu-list {
     list-style: none;
     padding: 0;
     margin: 0;
     display: none; /* Hide menu list by default */
-}
+  }
 
-.menu-list.active {
+  .menu-list.active {
     position: fixed; /* Positioner burgermenuen fast */
     top: 0;
     left: 0;
@@ -124,49 +119,47 @@
     cursor: pointer;
     background-color: black;
     z-index: 50;
-}
+  }
 
-.menu-list li {
+  .menu-list li {
     margin: 10px 0;
-}
+  }
 
-.menu-list li a {
+  .menu-list li a {
     text-decoration: none;
     color: white;
-}
-
+  }
 </style>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    const burgerMenu = document.querySelector('.burger-menu');
-    const menuList = document.querySelector('.menu-list');
+  document.addEventListener("DOMContentLoaded", function () {
+    const burgerMenu = document.querySelector(".burger-menu");
+    const menuList = document.querySelector(".menu-list");
 
-    burgerMenu.addEventListener('click', function() {
-        burgerMenu.classList.toggle('cross');
-        if (burgerMenu.classList.contains('cross')) {
-            // Burgermenuen er aktiv, tilføj "cross" klassen til alle ".bar" elementer
-            menuList.classList.add('active');
-        } else {
-            // Burgermenuen er ikke aktiv, fjern "cross" klassen fra alle ".bar" elementer
-            menuList.classList.remove('active');
-        }
+    burgerMenu.addEventListener("click", function () {
+      burgerMenu.classList.toggle("cross");
+      if (burgerMenu.classList.contains("cross")) {
+        // Burgermenuen er aktiv, tilføj "cross" klassen til alle ".bar" elementer
+        menuList.classList.add("active");
+      } else {
+        // Burgermenuen er ikke aktiv, fjern "cross" klassen fra alle ".bar" elementer
+        menuList.classList.remove("active");
+      }
     });
-});
+  });
 
+  document.addEventListener("DOMContentLoaded", function () {
+    const daLink = document.querySelector(".da");
+    const enLink = document.querySelector(".en");
 
-document.addEventListener('DOMContentLoaded', function() {
-    const daLink = document.querySelector('.da');
-    const enLink = document.querySelector('.en');
-
-    daLink.addEventListener('click', function() {
-        daLink.classList.add('bold'); // Tilføj klassen 'bold' for at gøre teksten fed
-        enLink.classList.remove('bold'); // Fjern eventuel fed tekst fra den anden link
+    daLink.addEventListener("click", function () {
+      daLink.classList.add("bold"); // Tilføj klassen 'bold' for at gøre teksten fed
+      enLink.classList.remove("bold"); // Fjern eventuel fed tekst fra den anden link
     });
 
-    enLink.addEventListener('click', function() {
-        enLink.classList.add('bold'); // Tilføj klassen 'bold' for at gøre teksten fed
-        daLink.classList.remove('bold'); // Fjern eventuel fed tekst fra den anden link
+    enLink.addEventListener("click", function () {
+      enLink.classList.add("bold"); // Tilføj klassen 'bold' for at gøre teksten fed
+      daLink.classList.remove("bold"); // Fjern eventuel fed tekst fra den anden link
     });
-});
-    </script>
+  });
+</script>

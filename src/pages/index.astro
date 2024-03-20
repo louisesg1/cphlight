@@ -3,102 +3,102 @@ import Layout from "../layouts/Layout.astro";
 import Banner from "../components/Banner.astro";
 import Readmore from "../components/Readmore.astro";
 import Sponsor from "../components/Sponsor.astro";
-
 ---
 
 <Layout>
-
   <div class="vid">
     <video width="1426" height="600" controls autoplay>
-        <source src="public/video.mov" type="video/mp4">
+      <source src="/video.mov" type="video/mp4" />
     </video>
+  </div>
+  <h1>02-25 FEBRUAR 2024</h1>
+  <div class="forklarende_tekst">
+    <p>
+      Copenhagen Light Festival er Nordens største lysfestival, der finder sted
+      i hjertet af København. Den nordiske vinter er lang og mørk, derfor
+      startede Copenhagen Light Festival, der hver februar lyser byen op.
+    </p>
+    <p>
+      Festivalen er non-profit og har et bredt udvalg af forskellige
+      lyskunstværker, kurateret af vores dygtige kuratorer. Festivalen egner sig
+      både til en kort gåtur, en længere cykeltur, en med bus eller båd.
+    </p>
+  </div>
 
-</div>
-<h1>02-25 FEBRUAR 2024</h1>
-<div class="forklarende_tekst"> 
-    <p>Copenhagen Light Festival er Nordens største lysfestival, der finder sted i hjertet af København. Den nordiske vinter er lang og mørk, derfor startede Copenhagen Light Festival, der hver februar lyser byen op.</p>
-<p>Festivalen er non-profit og har et bredt udvalg af forskellige lyskunstværker, kurateret af vores dygtige kuratorer. Festivalen egner sig både til en kort gåtur, en længere cykeltur, en med bus eller båd.</p>
-</div>
-
-
-<Banner>
-  <div class="text-rotate">Se lysværker og events for 2024</div>
+  <Banner>
     <div class="text-rotate">Se lysværker og events for 2024</div>
     <div class="text-rotate">Se lysværker og events for 2024</div>
     <div class="text-rotate">Se lysværker og events for 2024</div>
     <div class="text-rotate">Se lysværker og events for 2024</div>
-</Banner>
+    <div class="text-rotate">Se lysværker og events for 2024</div>
+  </Banner>
 
-<div class="container">
-    <img src="public/billede_forside.png" alt="Billede">
+  <div class="container">
+    <img src="/billede_forside.png" alt="Billede" />
     <h2 class="text">GUIDEDE TURE</h2>
   </div>
 
-
   <Readmore />
 
-<slot />
+  <slot />
 
-<Banner>
-  <div class="text-rotate">Se map og ruter under festivalen</div>
-  <div class="text-rotate">Se map og ruter under festivalen</div>
-  <div class="text-rotate">Se map og ruter under festivalen</div>
-  <div class="text-rotate">Se map og ruter under festivalen</div>
-  <div class="text-rotate">Se map og ruter under festivalen</div>
-</Banner>
+  <Banner>
+    <div class="text-rotate">Se map og ruter under festivalen</div>
+    <div class="text-rotate">Se map og ruter under festivalen</div>
+    <div class="text-rotate">Se map og ruter under festivalen</div>
+    <div class="text-rotate">Se map og ruter under festivalen</div>
+    <div class="text-rotate">Se map og ruter under festivalen</div>
+  </Banner>
 
-<div class="container1">
-<h1>TAK TIL</h1>
-<Sponsor />
-</div>
+  <div class="container1">
+    <h1>TAK TIL</h1>
+    <Sponsor />
+  </div>
 </Layout>
 
 <style>
-
   @media (min-width: 800px) {
-    h1{
-    text-align: center;
+    h1 {
+      text-align: center;
     }
 
     .forklarende_tekst {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 40px;
-        padding: 100px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      padding: 100px;
     }
- .container {
-  display: flex;
-  justify-content: center; /* Centrer vandret */
-  align-items: center; /* Centrer lodret */
-  flex-direction: column; /* Stak elementerne lodret */
-  height: 600px; /* Juster højde efter behov */
-  margin-top: 100px;
-}
+    .container {
+      display: flex;
+      justify-content: center; /* Centrer vandret */
+      align-items: center; /* Centrer lodret */
+      flex-direction: column; /* Stak elementerne lodret */
+      height: 600px; /* Juster højde efter behov */
+      margin-top: 100px;
+    }
 
-.container1 {
-  display: flex;
-  justify-content: center; /* Centrer vandret */
-  align-items: center; /* Centrer lodret */
-  flex-direction: column; /* Stak elementerne lodret */
-  margin-bottom: 150px;
-}
+    .container1 {
+      display: flex;
+      justify-content: center; /* Centrer vandret */
+      align-items: center; /* Centrer lodret */
+      flex-direction: column; /* Stak elementerne lodret */
+      margin-bottom: 150px;
+    }
 
-.text {
-  margin-top: 20px;
-margin-right: 660px;
-margin-bottom: 20px;
-}
+    .text {
+      margin-top: 20px;
+      margin-right: 660px;
+      margin-bottom: 20px;
+    }
 
-img {
-  max-width: 100%; /* Sørg for, at billedet ikke overstiger containerens bredde */
-  max-height: 100%; /* Sørg for, at billedet ikke overstiger containerens højde */
-}
+    img {
+      max-width: 100%; /* Sørg for, at billedet ikke overstiger containerens bredde */
+      max-height: 100%; /* Sørg for, at billedet ikke overstiger containerens højde */
+    }
 
-
-
-.vid {
-  width: 100%;
-  margin-top: -88px;
-}
-}
-    </style>
+    .vid {
+      width: 100%;
+      margin-top: -88px;
+    }
+  }
+</style>
