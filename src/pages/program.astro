@@ -1,68 +1,70 @@
 ---
-import "./styles/style.css";
 import Program_vark from "../components/Program_vark.astro";
 import Layout from "../layouts/Layout.astro";
 import Button from "../components/Button.astro";
 ---
-	<Layout>
-	<div class="start"> 
-		<h1>PROGRAM</h1>
-		<h3>02-25 FEBRUAR 2024</h3>
-	</div>
-		<div class="viden">	<p class="beskrivelse">Her kan du finde information om lysværkerne samt vores tilgængelige aktiviteter under festivalen.</p></div>
-<p class="område">Hvilke områder af byen ønsker du at se?</p>
 
+<Layout>
+  <div class="start">
+    <h1>PROGRAM</h1>
+    <h3>02-25 FEBRUAR 2024</h3>
+  </div>
+  <div class="viden">
+    <p class="beskrivelse">
+      Her kan du finde information om lysværkerne samt vores tilgængelige
+      aktiviteter under festivalen.
+    </p>
+  </div>
+  <p class="område">Hvilke områder af byen ønsker du at se?</p>
 
-<div class="by_liste">
-<Button variant="primary">København K</Button>
-	<Button variant="primary">Vesterbro</Button>
-		<Button variant="primary">Nørrebro</Button>
-		<Button variant="primary">Amager</Button>
-		<Button variant="primary">Østerbro</Button>
-		<Button variant="primary">Nordhavn</Button>
-		<Button variant="primary">Nordvest</Button>
-		<Button variant="primary">Amagerbro</Button>
-		<Button variant="primary">Christianshavn</Button>
-		<Button variant="primary">Valby</Button>
-</div>
+  <div class="by_liste">
+    <Button variant="primary">København K</Button>
+    <Button variant="primary">Vesterbro</Button>
+    <Button variant="primary">Nørrebro</Button>
+    <Button variant="primary">Amager</Button>
+    <Button variant="primary">Østerbro</Button>
+    <Button variant="primary">Nordhavn</Button>
+    <Button variant="primary">Nordvest</Button>
+    <Button variant="primary">Amagerbro</Button>
+    <Button variant="primary">Christianshavn</Button>
+    <Button variant="primary">Valby</Button>
+  </div>
 
+  <div class="valg">
+    <p>Hvad ønsker du at se?</p>
+    <Button variant="primary">Lysværker</Button>
+    <Button variant="primary">Events</Button>
+  </div>
 
-<div class="valg">
-	<p>Hvad ønsker du at se?</p>
-	<Button variant="primary">Lysværker</Button>
-	<Button variant="primary">Events</Button>
-</div>
+  <Program_vark />
+  <Program_vark />
+  <Program_vark />
+  <Program_vark />
+</Layout>
 
-		<Program_vark />
-		<Program_vark />
-		<Program_vark />
-		<Program_vark />
-	</Layout>
-
-
-
-	<style>
-	.viden, .by_liste, .valg {
+<style>
+  .viden,
+  .by_liste,
+  .valg {
     border-bottom: 0.5px solid white;
     width: 80%;
     margin: 50px auto;
-}
+  }
 
-.område, .start {
+  .område,
+  .start {
     width: 80%;
     margin: 50px auto;
     margin-bottom: 20px; /* Tilføj en margin til bunden af elementerne */
-}
+  }
 
-.beskrivelse {
+  .beskrivelse {
     margin-bottom: 60px;
-}
+  }
 
-.by_liste {
+  .by_liste {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     width: 80%;
-}
-	</style>
-
-
+  }
+</style>
