@@ -1,9 +1,148 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
 
 ---
 
 
 <Layout>
-	<h1>OM OS</h1>
+	<h1 class="start">OM OS</h1>
+	<div class="billede_side">
+	<img src="public/billede_lys.png" alt="">
+	<img src="public/billede_lys1.png" alt="">
+</div>
+
+<h1 class="start">Hvad er Copenhagen Light Festival?</h1>
+<div class="tekst_cph">
+	<p>Copenhagen Light Festival er en årligt tilbagevendende festival for lys, der transformerer det stille og kolde vintermørke til en særlig fejring af lyskunst, lysdesign og lysende oplevelser midt i København.  
+		I løbet af tre uger i februar præsenterer festivalen et bredt udvalg af lysbaserede værker – heriblandt skulptur, installation, projektion, event og belysning skabt af både etablerede og spirende lysdesignere, lyskunstnere, studerende og organisationer, 
+		Med et skræddersyet lysprogram kvalificeret af et kuratorisk udvalg,iscenesættes, fremhæves og fortolkes byens forskellige rum, pladser, bygninger, broer og skjulte steder på en ny og spændende måde. 
+		</p>
+		<p>
+			Hovedparten af værkerne er samlet langs en rute i indre by, mens enkelte værker befinder sig i områder udenfor centrum. Festivalen viser desuden en række events, som finder sted enten i byrummet eller indendørs. 
+			Festivalen inviterer internationale og lokale publikum i alle aldre til at gå op opdagelse i byen i den mørkeste og måske også koldeste måned på året.</p>
+</div>
+
+<div class="video_cph">
+<iframe width="490" height="315" src="https://www.youtube.com/embed/lG14qTHDKG0" frameborder="0" allowfullscreen></iframe>
+<iframe width="490" height="315" src="https://www.youtube.com/embed/37wnUtY7Hmk" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<h1 class="start">Foreningen Copenhagen Light Festival</h1>
+<div class="tekst_cph">
+	<p>Copenhagen Light Festival er en non-profit forening, som er grundlagt af Tivoli, Stromma, VNR.tv og Louis Poulsen / D Studio. Med København som kulisse søger foreningen at introducere og præsentere lyskunst i interaktion med byens særpræg, mørke og æstetik.
+		Det daglige arbejde på festivalen udføres af sekretariatet, der bistår bestyrelsen, samarbejder med kunstnere og værter, og støtter kuratorudvalget i deres arbejde med festivalprogrammet.</p>
+<p>Medlemmerne af kuratorudvalget er udnævnt af bestyrelsen og består af lysfaglige med baggrund indenfor lyskunst, lysdesign, arkitektur, lysevents og kunsthistorie. Kuratorudvalget afsætter værkmidler til projekter, kunstnere og værter på baggrund af en vurdering af festivalens overordnede udtryk, placeringen af lysinstallationen og interaktionen med byen og de andre lysværker.</p>
+	</div>
+
+	<h1 class="start">
+		Bestyrelsen
+	</h1>
+
+	<div class="bestyre_grid">
+<Card>
+	<img src="public/mads.png" alt="">
+	<p>Mads Vestergaard Olesen</p>
+	<p>Næstformand</p>
+	<p>Adm. dir. / CEO hos Stromma Denmark A/S</p>
+</Card>
+
+<Card>
+	<img src="public/jesper.png" alt="">
+	<p>Jesper Kongshaug</p>
+	<p>Formand</p>
+	<p>Lysdesigner, Tivoli</p>
+</Card>
+
+<Card>
+	<img src="public/kasper.png" alt="">
+	<p>Kasper Hammer</p>
+	<p>Bestyrelsesmedlem, Director, Product & Design</p>
+	<p>Architectural & Outdoor, Louis Poulsen</p>
+</Card>
+
+<Card>
+	<img src="public/annette.png" alt="">
+	<p>Annette Juhl</p>
+	<p>Bestyrelsesmedlem, kasserer</p>
+	<p>Tidl. vicedirektør Tivoli</p>
+</Card>
+
+<Card>
+	<img src="public/anders.png" alt="">
+	<p>Anders Kongshaug</p>
+	<p>Bestyrelsesmedlem</p>
+	<p>Direktør, vnr.TV…be seen more</p>
+</Card>
+
+<Card>
+	<img src="public/pia.png" alt="">
+	<p>Pia Allerslev</p>
+	<p>Bestyrelsesmedlem</p>
+	<p>Tidl. Kulturborgmester, Københavns kommune</p>
+</Card>
+
+<Card>
+	<img src="public/jacob.png" alt="">
+	<p>Jacob Helenius</p>
+	<p>Bestyrelsesmedlem</p>
+	<p>Design director, Tivoli</p>
+</Card>
+</div>
+
+<h1 class="start">Kuraturudvalget</h1>
+
+<div class="bestyre_grid">
+	<Card>
+		<img src="public/ravn.png" alt="">
+		<p>Jesper Ravn</p>
+		<p>Medlem af kuratorudvalget</p>
+		<p>Arkitekt, Lysdesigner, Associate IALD</p>
+	</Card>
+
+	<Card>
+		<img src="public/jesper.png" alt="">
+		<p>Jesper Kongshaug</p>
+		<p>Formand</p>
+		<p>Lysdesigner, Tivoli</p>
+	</Card>
+</div>
+
+
 </Layout>
+
+<style>
+	.billede_side, .video_cph {
+		display: flex;
+  justify-content: center; /* Centrer vandret */
+  align-items: center; /* Centrer lodret */
+  flex-direction: row; /* Stak elementerne lodret */
+  gap: 160px;
+	}
+
+	.start {
+    width: 80%;
+    margin: 50px auto;
+    margin-bottom: 20px;
+}
+
+.tekst_cph {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 10px auto;
+    gap: 155px;
+    width: 80%;
+	margin-bottom: 150px;
+}
+
+.bestyre_grid {
+	display: flex;
+    justify-content: normal;
+    gap: 99px;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 50px auto;
+  }
+
+
+</style>
