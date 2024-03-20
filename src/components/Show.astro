@@ -1,15 +1,12 @@
 ---
-
+const {data} = Astro.props;
+console.log(data);
 ---
 
-
 <article class="vark">
-    <h3>01. Du som er i Himmelen!</h3>
-    <div class="placering">
-       <p>Højbro Plads</p> 
-    </div>
+    <h2>{data.title}</h2>
+    <p>{data.area}</p>
 </article>
-
 
 <style>
 .vark {
@@ -19,7 +16,7 @@
     margin: 50px auto; /* Centrer artiklen vandret */
 }
 
-.vark:hover h3, .vark:hover .placering p {
+.vark:hover, .vark:hover h2, .vark:hover p {
     color: #0FF0FF; /* Ændr farven på h3-elementet til lys grå ved hover */
 }
 
@@ -39,4 +36,3 @@
     text-align: center;
 }
 </style>
-
