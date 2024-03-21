@@ -1,4 +1,5 @@
 ---
+//@ts-nocheck
 import Layout from '../../layouts/Layout.astro';
 export async function getStaticPaths(){
     const data = await fetch("https://ckutyzunqqammitjtjki.supabase.co/rest/v1/cphlightfestival", {
@@ -10,8 +11,8 @@ export async function getStaticPaths(){
 
     return data.map((show) => {
         return{
-            params: { slug: show.slug },
-            props: { myData: show },
+            params: {slug: show.slug},
+            props: {myData: show},
 
         };
     });
@@ -30,7 +31,7 @@ console.log(myData);
     <div class="mindre">
 <p>{myData.light}</p>
 <p>{myData.links}</p>
-<p>{myData.thanks}</p>
+<p>Tak til {myData.thanks}</p>
 </div>
 </div>
 </div>
@@ -48,8 +49,4 @@ console.log(myData);
     grid-template-columns: 1fr 1fr;
     gap: 80px;
   }
-
-
-  
-
 </style>
