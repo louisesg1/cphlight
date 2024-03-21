@@ -1,16 +1,88 @@
 ---
-
+import Layout from "../layouts/Layout.astro";
+import Button from "../components/Button.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout>
+  <h1>MAP</h1>
+  <div class="valg">
+    <div class="rundt">
+      <p>Hvordan ønsker du at komme rundt på din rute?</p>
+      <Button variant="primary">Gåben</Button>
+      <Button variant="primary">Cykel</Button>
+      <Button variant="primary">Bus</Button>
+      <Button variant="primary">Kanalrundfart</Button>
+    </div>
+    <div class="startrute">
+      <p>Hvor ønsker du at starte din rute?</p>
+      <Button variant="primary">Amager</Button>
+      <Button variant="primary">Amagerbro</Button>
+      <Button variant="primary">Christianshavn</Button>
+      <Button variant="primary">København K</Button>
+      <Button variant="primary">Nordhavn</Button>
+      <Button variant="primary">Nordvest</Button>
+      <Button variant="primary">Nørrebro</Button>
+      <Button variant="primary">Vesterbro</Button>
+      <Button variant="primary">Valby</Button>
+      <Button variant="primary">Østerbro</Button>
+    </div>
+    <div class="hvorlang">
+      <p>Hvor lang ønsker du at din rute skal være?</p>
+      <Button variant="primary">1-5 km</Button>
+      <Button variant="primary">5-8 km</Button>
+      <Button variant="primary">8-12 km</Button>
+      <Button variant="primary">12-15 km</Button>
+    </div>
+  </div>
+  <div class="map">
+    <h2>Din rute</h2>
+    <p>
+      Under kan du se hvilken rute, der passer bedst til dig. Klik på hvert pin,
+      for at se beskrivelser af hvert værk.
+    </p>
+    <img src="../../public/mapimg.webp" alt="Map" />
+    <div class="apptxt">
+      <h3>Hent vores app for at:</h3>
+      <p>Lokalisere alle lysværker fra din nuværende position.</p>
+      <p>Følge en rute: til fods, på cykel eller med bus</p>
+      <p>Finde tekst om lysværkerne og kunstnerene/designerene.</p>
+      <p>
+        Deltage i skattejagten: nyd en gratis drink, når du har besøgt min. 25
+        lysværker
+      </p>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  h1 {
+    margin-top: 50px;
+    margin-left: 50px;
+  }
+  .rundt p,
+  .startrute p,
+  .hvorlang p {
+    border-top: 1px solid white;
+    padding-top: 1.5em;
+    padding-bottom: 1em;
+  }
+  .valg {
+    border-bottom: 1px solid white;
+    margin: 50px;
+  }
+  .map {
+    margin: 50px;
+  }
+  .map img {
+    margin-left: 15em;
+    margin-top: 50px;
+  }
+  .rundt,
+  .startrute,
+  .hvorlang {
+    padding-bottom: 1.5em;
+  }
+  .apptxt {
+    margin: 50px;
+  }
+</style>
