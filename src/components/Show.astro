@@ -6,10 +6,22 @@ console.log(data);
 <article class="vark">
     <h2>{data.title}</h2>
     <p>{data.area}</p>
-</article>
+    <img src={`/600/${data.image.replace('.jpg', '.webp')}`} class="hej"/>
 </a>
 
 <style>
+
+.hej {
+    display: none;
+}
+
+.vark:hover .hej {
+    display: block;
+    width: 400px;
+}
+
+
+
 .vark {
     width: 80%;
     border: none;
