@@ -41,15 +41,18 @@ import Button from "../components/Button.astro";
       for at se beskrivelser af hvert værk.
     </p>
     <img src="../../public/mapimg.webp" alt="Map" />
-    <div class="apptxt">
-      <h3>Hent vores app for at:</h3>
-      <p>Lokalisere alle lysværker fra din nuværende position.</p>
-      <p>Følge en rute: til fods, på cykel eller med bus</p>
-      <p>Finde tekst om lysværkerne og kunstnerene/designerene.</p>
-      <p>
-        Deltage i skattejagten: nyd en gratis drink, når du har besøgt min. 25
-        lysværker
-      </p>
+    <div class="app">
+      <img class="qr" src="../../public/qrkode.webp" alt="qrkode" />
+      <div class="apptxt">
+        <h3>Hent vores app for at:</h3>
+        <p>Lokalisere alle lysværker fra din nuværende position.</p>
+        <p>Følge en rute: til fods, på cykel eller med bus</p>
+        <p>Finde tekst om lysværkerne og kunstnerene/designerene.</p>
+        <p>
+          Deltage i skattejagten: nyd en gratis drink, når du har besøgt min. 25
+          lysværker
+        </p>
+      </div>
     </div>
   </div>
 </Layout>
@@ -58,6 +61,14 @@ import Button from "../components/Button.astro";
   h1 {
     margin-top: 50px;
     margin-left: 50px;
+  }
+  .qr {
+    max-width: 40%;
+    max-height: auto;
+  }
+  .app {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
   }
   .rundt p,
   .startrute p,
